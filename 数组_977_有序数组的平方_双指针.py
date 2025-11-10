@@ -42,16 +42,15 @@ class Solution:
         length = len(nums)
         result = ['' for i in range(length)]
         i = 0
-        j = k = length-1
+        j = k = length - 1
         while i <= j:
-            if nums[i]*nums[i] < nums[j]*nums[j]:
-                result[k] = nums[j]*nums[j]
+            if nums[i] * nums[i] < nums[j] * nums[j]:
+                result[k] = nums[j] * nums[j]
                 j = j - 1
             else:
-                result[k] = nums[i]*nums[i]
+                result[k] = nums[i] * nums[i]
                 i = i + 1
             k = k - 1
         return result
-
 
 # leetcode submit region end(Prohibit modification and deletion)
